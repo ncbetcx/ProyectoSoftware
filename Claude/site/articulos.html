@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Artículos — Raíces Artesanales</title>
+<meta name="description" content="Explorá todos nuestros artículos artesanales: tejidos, cerámicas y pinturas. Filtrá por categoría y descargá la ficha técnica de cada producto.">
+<link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+<a class="saltar-enlace" href="#contenido-principal">Saltar al contenido principal</a>
+
+<header class="encabezado">
+  <div class="encabezado__contenedor">
+    <a class="encabezado__marca" href="index.html">
+      <span class="encabezado__titulo">Raíces Artesanales</span>
+      <span class="encabezado__subtitulo">Tejidos · Cerámicas · Pinturas</span>
+    </a>
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="articulos.html" aria-current="page">Artículos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido-principal">
+  <h1>Nuestros artículos</h1>
+  <p>
+    Filtrá por categoría para ver sólo los artículos que te interesan. Presioná
+    <strong>«Saber más»</strong> debajo de cada imagen para ver la información
+    completa del producto, y descargá la ficha en PDF si querés guardarla.
+  </p>
+
+  <!-- Los inputs de radio deben ser hermanos anteriores de .articulos-grid
+       para que el filtrado por CSS (sin JavaScript) funcione. -->
+  <input type="radio" name="filtro" id="filtro-todos" class="filtro-input" checked>
+  <input type="radio" name="filtro" id="filtro-tejidos" class="filtro-input">
+  <input type="radio" name="filtro" id="filtro-ceramicas" class="filtro-input">
+  <input type="radio" name="filtro" id="filtro-pinturas" class="filtro-input">
+
+  <div class="filtros" role="group" aria-label="Filtrar artículos por categoría">
+    <label class="filtro-etiqueta" for="filtro-todos">Todos</label>
+    <label class="filtro-etiqueta" for="filtro-tejidos">Tejidos</label>
+    <label class="filtro-etiqueta" for="filtro-ceramicas">Cerámicas</label>
+    <label class="filtro-etiqueta" for="filtro-pinturas">Pinturas</label>
+  </div>
+
+  <div class="articulos-grid">
+
+    <!-- ===================== TEJIDOS ===================== -->
+    <article class="producto producto--tejidos">
+      <img src="articulos/tejidos/archivo1.png"
+           alt="Poncho de lana beige/crudo tejido en telar, con motivo de rayas horizontales.">
+      <div class="producto__cuerpo">
+        <p class="producto__categoria">Tejidos</p>
+        <h3>Poncho de lana Beige</h3>
+        <p class="producto__precio">$38.000</p>
+        <details class="producto__detalle">
+          <summary>Saber más</summary>
+          <dl class="producto__info">
+            <dt>Descripción</dt>
+            <dd>Poncho tejido en telar criollo, en tono beige/crudo natural. Pieza única, ideal para los días fríos.</dd>
+            <dt>Materiales</dt>
+            <dd>Lana de oveja 100% hilada a mano, color natural crudo (sin teñir).</dd>
+            <dt>Dimensiones</dt>
+            <dd>120 cm x 140 cm</dd>
+            <dt>Cuidados</dt>
+            <dd>Lavar a mano con agua fría. No usar secarropas.</dd>
+          </dl>
+          <a class="enlace-pdf" href="articulos/tejidos/archivo1.pdf">
+            Descargar ficha técnica en PDF (Poncho de lana Beige)
+          </a>
+        </details>
+      </div>
+    </article>
+
+    <article class="producto producto--tejidos">
+      <img src="articulos/tejidos/archivo2.png"
+           alt="Manta artesanal en tonos beige y crudo, con textura de trenzas.">
+      <div class="producto__cuerpo">
+        <p class="producto__categoria">Tejidos</p>
+        <h3>Manta artesanal Beige</h3>
+        <p class="producto__precio">$29.500</p>
+        <details class="producto__detalle">
+          <summary>Saber más</summary>
+          <dl class="producto__info">
+            <dt>Descripción</dt>
+            <dd>Manta tejida a dos agujas en tonos beige y crudo, con textura de trenzas. Suave y liviana.</dd>
+            <dt>Materiales</dt>
+            <dd>Fibra de alpaca y algodón orgánico.</dd>
+            <dt>Dimensiones</dt>
+            <dd>150 cm x 200 cm</dd>
+            <dt>Cuidados</dt>
+            <dd>Lavado en seco recomendado. Guardar doblada, lejos de la humedad.</dd>
+          </dl>
+          <a class="enlace-pdf" href="articulos/tejidos/archivo2.pdf">
+            Descargar ficha técnica en PDF (Manta artesanal Beige)
+          </a>
+        </details>
+      </div>
+    </article>
+
+    <article class="producto producto--tejidos">
+      <img src="articulos/tejidos/archivo3.png"
+           alt="Bufanda blanca tejida a mano, en lana natural sin teñir.">
+      <div class="producto__cuerpo">
+        <p class="producto__categoria">Tejidos</p>
+        <h3>Bufanda tejida a mano Blanca</h3>
+        <p class="producto__precio">$12.800</p>
+        <details class="producto__detalle">
+          <summary>Saber más</summary>
+          <dl class="producto__info">
+            <dt>Descripción</dt>
+            <dd>Bufanda liviana tejida con punto arroz, en blanco natural. Un accesorio versátil y luminoso.</dd>
+            <dt>Materiales</dt>
+            <dd>Lana merino blanca, sin teñir.</dd>
+            <dt>Dimensiones</dt>
+            <dd>180 cm x 25 cm</dd>
+            <dt>Cuidados</dt>
+            <dd>Lavar a mano con jabón neutro. Secar en posición horizontal.</dd>
+          </dl>
+          <a class="enlace-pdf" href="articulos/tejidos/archivo3.pdf">
+            Descargar ficha técnica en PDF (Bufanda tejida a mano Blanca)
+          </a>
+        </details>
+      </div>
+    </article>
+
+    <!-- ===================== CERÁMICAS ===================== -->
+    <article class="producto producto--ceramicas">
+      <img src="articulos/ceramicas/archivo1.png"
+           alt="Jarrón de cerámica terracota torneado a mano, de forma redondeada.">
+      <div class="producto__cuerpo">
+        <p class="producto__categoria">Cerámicas</p>
+        <h3>Jarrón de cerámica Terracota</h3>
+        <p class="producto__precio">$21.000</p>
+        <details class="producto__detalle">
+          <summary>Saber más</summary>
+          <dl class="producto__info">
+            <dt>Descripción</dt>
+            <dd>Jarrón torneado a mano y cocido en horno a leña, con esmalte terracota mate.</dd>
+            <dt>Materiales</dt>
+            <dd>Arcilla roja de la región, esmalte cerámico atóxico.</dd>
+            <dt>Dimensiones</dt>
+            <dd>Alto 30 cm, diámetro 18 cm</dd>
+            <dt>Cuidados</dt>
+            <dd>No apto para lavavajillas. Limpiar con paño húmedo.</dd>
+          </dl>
+          <a class="enlace-pdf" href="articulos/ceramicas/archivo1.pdf">
+            Descargar ficha técnica en PDF (Jarrón de cerámica Terracota)
+          </a>
+        </details>
+      </div>
+    </article>
+
+    <article class="producto producto--ceramicas">
+      <img src="articulos/ceramicas/archivo2.png"
+           alt="Set de cinco tazas de cerámica esmaltadas en azul y gris.">
+      <div class="producto__cuerpo">
+        <p class="producto__categoria">Cerámicas</p>
+        <h3>Set de tazas artesanales</h3>
+        <p class="producto__precio">$19.500</p>
+        <details class="producto__detalle">
+          <summary>Saber más</summary>
+          <dl class="producto__info">
+            <dt>Descripción</dt>
+            <dd>Set de cinco tazas torneadas a mano, esmaltadas en azul y gris.</dd>
+            <dt>Materiales</dt>
+            <dd>Arcilla blanca, esmalte alimentario en azul y gris.</dd>
+            <dt>Dimensiones</dt>
+            <dd>Set de 5 unidades, 250 ml cada una</dd>
+            <dt>Cuidados</dt>
+            <dd>Aptas para lavavajillas y microondas.</dd>
+          </dl>
+          <a class="enlace-pdf" href="articulos/ceramicas/archivo2.pdf">
+            Descargar ficha técnica en PDF (Set de tazas artesanales)
+          </a>
+        </details>
+      </div>
+    </article>
+
+    <article class="producto producto--ceramicas">
+      <img src="articulos/ceramicas/archivo3.png"
+           alt="Plato decorativo de cerámica con motivos geométricos pintados a mano.">
+      <div class="producto__cuerpo">
+        <p class="producto__categoria">Cerámicas</p>
+        <h3>Plato decorativo pintado a mano</h3>
+        <p class="producto__precio">$14.200</p>
+        <details class="producto__detalle">
+          <summary>Saber más</summary>
+          <dl class="producto__info">
+            <dt>Descripción</dt>
+            <dd>Plato decorativo con motivos geométricos inspirados en textiles andinos, pintado a mano.</dd>
+            <dt>Materiales</dt>
+            <dd>Arcilla roja, engobe blanco, esmalte transparente.</dd>
+            <dt>Dimensiones</dt>
+            <dd>Diámetro 26 cm</dd>
+            <dt>Cuidados</dt>
+            <dd>Uso decorativo. Limpiar con paño seco.</dd>
+          </dl>
+          <a class="enlace-pdf" href="articulos/ceramicas/archivo3.pdf">
+            Descargar ficha técnica en PDF (Plato decorativo pintado a mano)
+          </a>
+        </details>
+      </div>
+    </article>
+
+    <!-- ===================== PINTURAS ===================== -->
+    <article class="producto producto--pinturas">
+      <img src="articulos/pinturas/archivo1.png"
+           alt="Pintura al óleo de un paisaje pampeano al atardecer, en tonos tierra.">
+      <div class="producto__cuerpo">
+        <p class="producto__categoria">Pinturas</p>
+        <h3>Paisaje pampeano al óleo</h3>
+        <p class="producto__precio">$45.000</p>
+        <details class="producto__detalle">
+          <summary>Saber más</summary>
+          <dl class="producto__info">
+            <dt>Descripción</dt>
+            <dd>Obra original al óleo que retrata un atardecer en la llanura pampeana.</dd>
+            <dt>Materiales</dt>
+            <dd>Óleo sobre lienzo, bastidor de madera.</dd>
+            <dt>Dimensiones</dt>
+            <dd>50 cm x 70 cm</dd>
+            <dt>Cuidados</dt>
+            <dd>Evitar exposición directa al sol. Limpiar con plumero suave.</dd>
+          </dl>
+          <a class="enlace-pdf" href="articulos/pinturas/archivo1.pdf">
+            Descargar ficha técnica en PDF (Paisaje pampeano al óleo)
+          </a>
+        </details>
+      </div>
+    </article>
+
+    <article class="producto producto--pinturas">
+      <img src="articulos/pinturas/archivo2.png"
+           alt="Cuadro abstracto con texturas en tonos beige, gris y terracota.">
+      <div class="producto__cuerpo">
+        <p class="producto__categoria">Pinturas</p>
+        <h3>Cuadro abstracto en tonos tierra</h3>
+        <p class="producto__precio">$33.000</p>
+        <details class="producto__detalle">
+          <summary>Saber más</summary>
+          <dl class="producto__info">
+            <dt>Descripción</dt>
+            <dd>Composición abstracta con texturas superpuestas en beige, gris y terracota.</dd>
+            <dt>Materiales</dt>
+            <dd>Acrílico sobre lienzo.</dd>
+            <dt>Dimensiones</dt>
+            <dd>40 cm x 40 cm</dd>
+            <dt>Cuidados</dt>
+            <dd>No requiere mantenimiento especial. Evitar humedad.</dd>
+          </dl>
+          <a class="enlace-pdf" href="articulos/pinturas/archivo2.pdf">
+            Descargar ficha técnica en PDF (Cuadro abstracto en tonos tierra)
+          </a>
+        </details>
+      </div>
+    </article>
+
+    <article class="producto producto--pinturas">
+      <img src="articulos/pinturas/archivo3.png"
+           alt="Retrato en acuarela con trazo suelto en paleta neutra con acentos bordó.">
+      <div class="producto__cuerpo">
+        <p class="producto__categoria">Pinturas</p>
+        <h3>Retrato en acuarela</h3>
+        <p class="producto__precio">$19.500</p>
+        <details class="producto__detalle">
+          <summary>Saber más</summary>
+          <dl class="producto__info">
+            <dt>Descripción</dt>
+            <dd>Retrato en acuarela con trazo suelto, en una paleta neutra con acentos bordó.</dd>
+            <dt>Materiales</dt>
+            <dd>Acuarela sobre papel de algodón 300 g.</dd>
+            <dt>Dimensiones</dt>
+            <dd>30 cm x 40 cm (sin marco)</dd>
+            <dt>Cuidados</dt>
+            <dd>Enmarcar bajo vidrio para preservar el papel. Evitar luz solar directa.</dd>
+          </dl>
+          <a class="enlace-pdf" href="articulos/pinturas/archivo3.pdf">
+            Descargar ficha técnica en PDF (Retrato en acuarela)
+          </a>
+        </details>
+      </div>
+    </article>
+
+  </div>
+</main>
+
+<footer class="pie">
+  <div class="pie__contenedor">
+    <p>© 2026 Raíces Artesanales. Todos los derechos reservados.</p>
+    <p><a href="contacto.html">Contactanos</a> · <a href="nosotros.html">Sobre nosotros</a></p>
+  </div>
+</footer>
+</body>
+</html>

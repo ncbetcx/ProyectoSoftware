@@ -1,0 +1,600 @@
+/* =========================================================
+   Raíces Artesanales — estilosIA.css
+   Paleta: beige / terracota / gris neutro / bordó (acento)
+   Pensado para buen contraste y compatibilidad con
+   lectores de pantalla y usuarios con daltonismo.
+   ========================================================= */
+
+:root {
+  --color-beige-claro: #F7F1E7;
+  --color-beige: #EFE6D8;
+  --color-terracota: #B5493B;
+  --color-terracota-oscuro: #8C3A2F;
+  --color-bordo: #7A2E2E;
+  --color-bordo-oscuro: #5C2020;
+  --color-gris: #6B6862;
+  --color-gris-oscuro: #4A4640;
+  --color-texto: #2E2B26;
+  --color-blanco: #FFFFFF;
+  --color-borde: #C9BFAE;
+
+  --fuente-base: "Segoe UI", Verdana, Arial, sans-serif;
+  --radio-borde: 10px;
+  --sombra-suave: 0 2px 8px rgba(46, 43, 38, 0.12);
+  --enfoque: 3px solid var(--color-bordo);
+}
+
+/* ---------- Reset básico ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fuente-base);
+  background-color: var(--color-beige-claro);
+  color: var(--color-texto);
+  line-height: 1.6;
+  font-size: 1.0625rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--color-bordo);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-terracota-oscuro);
+}
+
+/* ---------- Foco visible para navegación por teclado ---------- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+label:focus-within,
+summary:focus-visible {
+  outline: var(--enfoque);
+  outline-offset: 3px;
+}
+
+/* ---------- Enlace "saltar al contenido" ---------- */
+.saltar-enlace {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  background: var(--color-bordo);
+  color: var(--color-blanco);
+  padding: 0.75rem 1.25rem;
+  z-index: 1000;
+  border-radius: 0 0 var(--radio-borde) 0;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.saltar-enlace:focus {
+  left: 0;
+  top: 0;
+}
+
+/* ---------- Utilidad: sólo para lectores de pantalla ---------- */
+.solo-lectores {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Encabezado y navegación ---------- */
+.encabezado {
+  background-color: var(--color-bordo);
+  color: var(--color-blanco);
+  box-shadow: var(--sombra-suave);
+}
+
+.encabezado__contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.encabezado__marca {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-blanco);
+  text-decoration: none;
+}
+
+.encabezado__marca:hover,
+.encabezado__marca:focus {
+  color: var(--color-beige);
+}
+
+.encabezado__titulo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.encabezado__subtitulo {
+  font-size: 0.85rem;
+  color: var(--color-beige);
+}
+
+.nav-principal ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-principal a {
+  display: inline-block;
+  color: var(--color-blanco);
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radio-borde);
+  font-weight: 600;
+  border: 2px solid transparent;
+}
+
+.nav-principal a:hover,
+.nav-principal a:focus {
+  background-color: var(--color-bordo-oscuro);
+  border-color: var(--color-beige);
+}
+
+.nav-principal a[aria-current="page"] {
+  background-color: var(--color-terracota);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* ---------- Contenedor general ---------- */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+section {
+  margin-bottom: 2.5rem;
+}
+
+h1, h2, h3, h4 {
+  color: var(--color-bordo);
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 3px solid var(--color-terracota);
+  padding-bottom: 0.35rem;
+  display: inline-block;
+}
+
+/* ---------- Hero (portada) ---------- */
+.hero {
+  background-color: var(--color-beige);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 2.5rem 1.5rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.hero p {
+  max-width: 60ch;
+  margin: 0.75rem auto 0;
+  font-size: 1.1rem;
+  color: var(--color-gris-oscuro);
+}
+
+/* ---------- Botones ---------- */
+.boton {
+  display: inline-block;
+  background-color: var(--color-terracota);
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radio-borde);
+  border: 2px solid var(--color-terracota-oscuro);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.boton:hover,
+.boton:focus {
+  background-color: var(--color-terracota-oscuro);
+  color: var(--color-blanco);
+}
+
+.boton--secundario {
+  background-color: var(--color-gris);
+  border-color: var(--color-gris-oscuro);
+}
+
+.boton--secundario:hover,
+.boton--secundario:focus {
+  background-color: var(--color-gris-oscuro);
+}
+
+/* ---------- Tarjetas de categorías (home) ---------- */
+.categorias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.tarjeta-categoria {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-top: 6px solid var(--color-terracota);
+  border-radius: var(--radio-borde);
+  padding: 1.5rem;
+  box-shadow: var(--sombra-suave);
+  text-align: center;
+}
+
+.tarjeta-categoria h3 {
+  margin-top: 0;
+}
+
+/* ---------- Página de artículos: filtros con radios (sin JS) ---------- */
+.filtro-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.filtro-etiqueta {
+  display: inline-block;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid var(--color-terracota);
+  color: var(--color-bordo);
+  background-color: var(--color-blanco);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.filtro-etiqueta:hover {
+  background-color: var(--color-beige);
+}
+
+.filtro-input:checked + .filtro-etiqueta {
+  background-color: var(--color-terracota);
+  color: var(--color-blanco);
+}
+
+.filtro-input:focus-visible + .filtro-etiqueta {
+  outline: var(--enfoque);
+  outline-offset: 3px;
+}
+
+.articulos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.75rem;
+}
+
+.producto {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  overflow: hidden;
+  box-shadow: var(--sombra-suave);
+  display: flex;
+  flex-direction: column;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  border-bottom: 4px solid var(--color-terracota);
+}
+
+.producto__cuerpo {
+  padding: 1rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.producto__categoria {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  color: var(--color-gris);
+  font-weight: 700;
+  margin: 0 0 0.25rem;
+}
+
+.producto h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+
+.producto__precio {
+  font-weight: bold;
+  color: var(--color-terracota-oscuro);
+  margin-bottom: 0.75rem;
+}
+
+/* Mostrar/ocultar según filtro seleccionado (sólo CSS) */
+#filtro-tejidos:checked ~ .articulos-grid .producto:not(.producto--tejidos),
+#filtro-ceramicas:checked ~ .articulos-grid .producto:not(.producto--ceramicas),
+#filtro-pinturas:checked ~ .articulos-grid .producto:not(.producto--pinturas) {
+  display: none;
+}
+
+/* ---------- "Saber más" con <details>/<summary> nativos ---------- */
+details.producto__detalle {
+  margin-top: auto;
+  border-top: 1px dashed var(--color-borde);
+  padding-top: 0.75rem;
+}
+
+details.producto__detalle summary {
+  list-style: none;
+  cursor: pointer;
+  display: inline-block;
+  background-color: var(--color-bordo);
+  color: var(--color-blanco);
+  font-weight: bold;
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radio-borde);
+  border: 2px solid var(--color-bordo-oscuro);
+}
+
+details.producto__detalle summary::-webkit-details-marker {
+  display: none;
+}
+
+details.producto__detalle summary:hover {
+  background-color: var(--color-bordo-oscuro);
+}
+
+details.producto__detalle[open] summary {
+  margin-bottom: 0.75rem;
+}
+
+.producto__info {
+  font-size: 0.95rem;
+  color: var(--color-gris-oscuro);
+}
+
+.producto__info dt {
+  font-weight: 700;
+  color: var(--color-gris-oscuro);
+  margin-top: 0.5rem;
+}
+
+.producto__info dd {
+  margin: 0 0 0.35rem;
+}
+
+.enlace-pdf {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+  font-weight: 700;
+  color: var(--color-terracota-oscuro);
+  text-decoration: underline;
+}
+
+/* ---------- Formulario de contacto ---------- */
+.formulario {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 1.75rem;
+  max-width: 640px;
+  box-shadow: var(--sombra-suave);
+}
+
+.campo {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: var(--color-gris-oscuro);
+}
+
+.campo .campo__ayuda {
+  font-size: 0.85rem;
+  color: var(--color-gris);
+  margin-top: 0.25rem;
+}
+
+.campo input,
+.campo textarea {
+  padding: 0.7rem 0.85rem;
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-texto);
+  background-color: var(--color-beige-claro);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+  border-color: var(--color-bordo);
+  outline: none;
+}
+
+.campo textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.campo-requerido::after {
+  content: " *";
+  color: var(--color-bordo);
+}
+
+.formulario__nota {
+  font-size: 0.9rem;
+  color: var(--color-gris);
+  margin-top: 1rem;
+}
+
+/* ---------- Info de contacto / nosotros ---------- */
+.info-contacto,
+.tarjeta {
+  background-color: var(--color-beige);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 1.5rem;
+}
+
+.info-contacto dt {
+  font-weight: 700;
+  color: var(--color-bordo);
+}
+
+.info-contacto dd {
+  margin: 0 0 0.75rem;
+}
+
+.perfil {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .perfil {
+    grid-template-columns: 220px 1fr;
+    align-items: start;
+  }
+}
+
+.perfil__imagen {
+  border-radius: var(--radio-borde);
+  border: 4px solid var(--color-beige);
+  box-shadow: var(--sombra-suave);
+}
+
+/* ---------- Pie de página ---------- */
+.pie {
+  background-color: var(--color-gris-oscuro);
+  color: var(--color-beige-claro);
+  margin-top: 3rem;
+}
+
+.pie__contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.pie a {
+  color: var(--color-beige);
+}
+
+.pie a:hover,
+.pie a:focus {
+  color: var(--color-blanco);
+}
+
+/* ---------- Responsividad ---------- */
+@media (max-width: 700px) {
+  .encabezado__contenedor {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-principal ul {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero {
+    padding: 1.75rem 1rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .filtros {
+    flex-direction: column;
+  }
+
+  .filtro-etiqueta {
+    text-align: center;
+  }
+}
+
+/* ---------- Alto contraste / modo de movimiento reducido ---------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-texto: #000000;
+    --color-borde: #4A4640;
+  }
+
+  .boton,
+  .filtro-etiqueta,
+  details.producto__detalle summary {
+    border-width: 3px;
+  }
+}

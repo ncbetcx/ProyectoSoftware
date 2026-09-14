@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto — Raíces Artesanales</title>
+<meta name="description" content="Escribinos tu consulta sobre nuestros productos artesanales: tejidos, cerámicas y pinturas.">
+<link rel="stylesheet" href="estilosIA.css">
+</head>
+<body>
+<a class="saltar-enlace" href="#contenido-principal">Saltar al contenido principal</a>
+
+<header class="encabezado">
+  <div class="encabezado__contenedor">
+    <a class="encabezado__marca" href="index.html">
+      <span class="encabezado__titulo">Raíces Artesanales</span>
+      <span class="encabezado__subtitulo">Tejidos · Cerámicas · Pinturas</span>
+    </a>
+    <nav class="nav-principal" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="articulos.html">Artículos</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="contenido-principal">
+  <h1>Contacto</h1>
+  <p>
+    ¿Tenés una consulta sobre algún producto, un pedido especial o querés saber
+    más sobre nuestro trabajo? Completá el formulario y te responderemos a la
+    brevedad.
+  </p>
+
+  <form class="formulario" action="mailto:contacto@raicesartesanales.com.ar"
+        method="post" enctype="text/plain" aria-describedby="nota-formulario">
+
+    <div class="campo">
+      <label for="nombre" class="campo-requerido">Nombre</label>
+      <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
+    </div>
+
+    <div class="campo">
+      <label for="apellido" class="campo-requerido">Apellido</label>
+      <input type="text" id="apellido" name="apellido" autocomplete="family-name" required>
+    </div>
+
+    <div class="campo">
+      <label for="email" class="campo-requerido">Correo electrónico</label>
+      <input type="email" id="email" name="email" autocomplete="email" required
+             aria-describedby="ayuda-email">
+      <span class="campo__ayuda" id="ayuda-email">Ejemplo: nombre@correo.com</span>
+    </div>
+
+    <div class="campo">
+      <label for="telefono">Teléfono</label>
+      <input type="tel" id="telefono" name="telefono" autocomplete="tel"
+             aria-describedby="ayuda-telefono">
+      <span class="campo__ayuda" id="ayuda-telefono">Opcional. Incluí código de área.</span>
+    </div>
+
+    <div class="campo">
+      <label for="consulta" class="campo-requerido">Consulta</label>
+      <textarea id="consulta" name="consulta" required
+                aria-describedby="ayuda-consulta"></textarea>
+      <span class="campo__ayuda" id="ayuda-consulta">Contanos qué producto te interesa o qué necesitás.</span>
+    </div>
+
+    <button type="submit" class="boton">Enviar consulta</button>
+
+    <p class="formulario__nota" id="nota-formulario">
+      Los campos marcados con <span aria-hidden="true">*</span>
+      <span class="solo-lectores">asterisco</span> son obligatorios. Al enviar,
+      se abrirá tu cliente de correo predeterminado con los datos completados.
+    </p>
+  </form>
+
+  <section aria-labelledby="otras-vias-titulo" style="margin-top:2.5rem;">
+    <h2 id="otras-vias-titulo">Otras formas de contactarnos</h2>
+    <dl class="info-contacto">
+      <dt>Correo electrónico</dt>
+      <dd><a href="mailto:contacto@raicesartesanales.com.ar">contacto@raicesartesanales.com.ar</a></dd>
+      <dt>Teléfono</dt>
+      <dd>+54 221 555-0134</dd>
+      <dt>Ubicación</dt>
+      <dd>La Plata, Buenos Aires, Argentina</dd>
+    </dl>
+  </section>
+</main>
+
+<footer class="pie">
+  <div class="pie__contenedor">
+    <p>© 2026 Raíces Artesanales. Todos los derechos reservados.</p>
+    <p><a href="contacto.html">Contactanos</a> · <a href="nosotros.html">Sobre nosotros</a></p>
+  </div>
+</footer>
+</body>
+</html>
